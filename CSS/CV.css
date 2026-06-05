@@ -1,0 +1,465 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 50px 60px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 30px;
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .header-name {
+            font-size: 32px;
+            font-weight: 400;
+            color: #222;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .header-name .first-name {
+            font-weight: 300;
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-style: italic;
+            color: #555;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 14px;
+            color: #444;
+        }
+
+        .header-contact a {
+            color: #444;
+            text-decoration: none;
+        }
+
+        .header-contact a:hover {
+            color: #2a6496;
+            text-decoration: underline;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-icon {
+            width: 18px;
+            text-align: center;
+            font-size: 14px;
+            color: #2a6496;
+        }
+
+        .header-photo {
+            flex-shrink: 0;
+        }
+
+        .header-photo img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        /* Sections */
+        .section {
+            margin-top: 28px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #222;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #2a6496;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 3px;
+            background: #2a6496;
+        }
+
+        .section-content {
+            padding-left: 40px;
+        }
+
+        /* Profile */
+        .profile-text {
+            text-align: justify;
+            color: #444;
+        }
+
+        .profile-text strong {
+            color: #222;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .exp-date {
+            font-size: 14px;
+            color: #666;
+            min-width: 160px;
+            font-weight: 500;
+        }
+
+        .exp-title {
+            font-weight: 700;
+            color: #222;
+            font-size: 15px;
+        }
+
+        .exp-company {
+            font-style: italic;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .exp-description {
+            margin-top: 6px;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Education */
+        .edu-item {
+            margin-bottom: 10px;
+        }
+
+        .edu-header {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .edu-date {
+            font-size: 14px;
+            color: #666;
+            min-width: 160px;
+            font-weight: 500;
+        }
+
+        .edu-title {
+            font-weight: 700;
+            color: #222;
+            font-size: 15px;
+        }
+
+        .edu-school {
+            font-style: italic;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .edu-location {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* CV Items */
+        .cv-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+            align-items: baseline;
+        }
+
+        .cv-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cv-item-label {
+            font-weight: 600;
+            color: #333;
+            min-width: 140px;
+            font-size: 14px;
+        }
+
+        .cv-item-value {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .cv-item-value strong {
+            color: #222;
+        }
+
+        /* ===== Secciones plegables (opcional) ===== */
+        .optional-sections {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px dashed #bbb;
+        }
+
+        .optional-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .collapsible {
+            margin-bottom: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background: #fafafa;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .collapsible:hover {
+            box-shadow: 0 2px 8px rgba(42, 100, 150, 0.12);
+        }
+
+        .collapsible summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2a6496;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            user-select: none;
+            transition: background 0.25s ease;
+        }
+
+        .collapsible summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .collapsible summary::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-right: 2px solid #2a6496;
+            border-bottom: 2px solid #2a6496;
+            transform: rotate(-45deg);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .collapsible[open] summary::before {
+            transform: rotate(45deg);
+        }
+
+        .collapsible summary:hover {
+            background: #f0f5fa;
+        }
+
+        .collapsible summary .summary-title {
+            flex: 1;
+        }
+
+        .collapsible summary .summary-hint {
+            font-size: 11px;
+            font-weight: 400;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .collapsible .collapsible-content {
+            padding: 0 20px 20px 20px;
+            color: #444;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .collapsible p {
+            margin-top: 14px;
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .collapsible p:first-child {
+            margin-top: 14px;
+        }
+
+        .collapsible ul {
+            margin-top: 12px;
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .collapsible ul li {
+            margin-bottom: 10px;
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .collapsible ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #2a6496;
+        }
+
+        .collapsible ul li strong {
+            color: #222;
+        }
+
+        .collapsible .note-box {
+            margin-top: 14px;
+            padding: 12px 16px;
+            background: #f0f5fa;
+            border-left: 3px solid #2a6496;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #444;
+            font-style: italic;
+        }
+
+        .collapsible .note-box strong {
+            color: #2a6496;
+            font-style: normal;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .cv-container {
+                padding: 25px 20px;
+                margin: 10px;
+            }
+
+            .header {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+
+            .header-name {
+                font-size: 24px;
+            }
+
+            .header-title {
+                font-size: 15px;
+            }
+
+            .header-contact {
+                align-items: center;
+            }
+
+            .header-photo img {
+                width: 110px;
+                height: 110px;
+            }
+
+            .section-content {
+                padding-left: 10px;
+            }
+
+            .exp-header,
+            .edu-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .exp-date,
+            .edu-date {
+                min-width: auto;
+            }
+
+            .cv-item {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .cv-item-label {
+                min-width: auto;
+            }
+
+            .collapsible summary {
+                font-size: 14px;
+                padding: 14px 14px;
+            }
+
+            .collapsible .collapsible-content {
+                padding: 0 14px 16px 14px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: #fff;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                padding: 30px 40px;
+            }
+            .optional-sections {
+                page-break-before: always;
+            }
+            .collapsible[open] summary::before {
+                transform: rotate(45deg);
+            }
+        }
+
