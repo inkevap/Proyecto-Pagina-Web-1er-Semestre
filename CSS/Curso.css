@@ -1,0 +1,134 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-bottom: 20px;
+            max-width: 600px;
+        }
+
+        .view-all {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #5a67d8;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: color 0.2s ease;
+        }
+
+        .view-all:hover {
+            color: #4c51bf;
+        }
+
+        .view-all svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .view-all:hover svg {
+            transform: translateX(4px);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background-color: #e2e8f0;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: #ffffff;
+            padding: 48px 40px;
+            transition: background-color 0.2s ease;
+        }
+
+        .feature-card:hover {
+            background-color: #f7fafc;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .feature-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-description ul li {
+            margin-bottom: 12px;
+            position: relative;
+            padding-left: 0;
+        }
+
+        .feature-description ul li strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 32px 24px;
+            }
+        }
